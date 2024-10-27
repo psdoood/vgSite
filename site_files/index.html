@@ -4,15 +4,139 @@
 <head>
     <title>The Rise of Video Games</title>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-    <div>
-        <h1>The Rise of Video Games</h1>
-        <p>Blah Blah Blah...</p>
-        <img src = "images/Tetris.png" alt="Tetris-img">
-    </div>
+    <header>
+
+    </header>
+
+    <!-- Landing Page -->
+    <section class="video-landing">
+        <video id="background-video" autoplay loop muted>
+            <source src="videos/pong.mp4" type="video/mp4">
+        </video>
+        <div class="video-text">
+            <h1>Video Games & Media Convergences</h1>
+            <p>From simple beginnings to global industry,
+                explore video games impact on modern media</p>
+            <button onclick="document.querySelector('.timeline').scrollIntoView({ behavior: 'smooth' });">Press Start</button>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section>
+        <div class="timeline">
+            <div class="tl-left">
+                <div>
+                    <h2>1947</h2>
+                    <p>First interactive game with an
+                        electronic display created, sparking
+                        new ideas through the use of digital media</p>
+                </div>
+            </div>
+            <div class="tl-right">
+                <div>
+                    <h2>1950s</h2>
+                    <p>First video games created, setting a stage for
+                        a new and unique form of entertainment</p>
+                </div>
+            </div>
+            <div class="tl-left">
+                <div>
+                    <h2>1970s</h2>
+                    <p>Early arcade video games like Pong are released, marking
+                        the beginnings of public interest in video games
+                    </p>
+                </div>
+            </div>
+            <div class="tl-right">
+                <div>
+                    <h2>1972</h2>
+                    <p> Magnavox Odyssey, the first home gaming console, launches,
+                        making video games accessible to homes all over
+                    </p>
+                </div>
+            </div>
+            <div class="tl-left">
+                <div>
+                    <h2>1980</h2>
+                    <p> In the US, video games surge in popularity and were consuming
+                        11.2 billion quarters annually, $2.8 billion in revenue</p>
+                </div>
+            </div>
+            <div class="tl-right">
+                <div>
+                    <h2>Early 1980s</h2>
+                    <p>The estimated revenue was $5 billion, exceeding the income
+                        of the entire US film industry for the first time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why section -->
+    <section>
+        <div>
+            <h1>Why did they become popular?</h1>
+            <h3>Technology</h3>
+            <p>The popularity of video games exploded due to the many technological
+                advances of the time. Advancments in areas such as microprocessors
+                and graphics made gaming more accessible and visually interesting. </p>
+            <h3>Interactivity</h3>
+            <p>Unlike TV or movies, games let players influence outcomes, creating
+                a highly engaging and personalized experience that other media forms
+                cannot easily recreate.</p>
+            <h3>Cultural Shift</h3>
+            <p>Gaming spread into homes and arcades, becoming a key part of pop culture
+                and social interaction and cultural phenomenon with mainstream appeal.</p>
+        </div>
+    </section>
+
+    <!-- Media convergence section -->
+    <section>
+        <div>
+            <h1>Media Convergence</h1>
+            <p>Media convergence is the merging and blending of multiple different media forms into one, creating
+                new types of experiences.</p>
+            <p>Video games are now integral to modern culture, influencing industries, shaping stories, and uniting
+                players across the globe. The journey from a niche hobby to a mainstream media form illustrates their
+                transformative power and continuing impact.</p>
+        </div>
+    </section>
+
+    <!-- Conclusion section -->
+    <section>
+        <div>
+            <h1>Game Over (or is it?)</h1>
+            <p>Video games have grown exponentially from their conception
+                creating a very influential section of modern media. Who knows
+                how they will evolve going forward and what other forms of media
+                will converge to create new and unique experiences
+            </p>
+            <p>"Yet across the gulf of space, minds that are to our minds
+                as ours are to those of the beasts that perish, intellects
+                vast and cool and unsympathetic, regarded this earth with
+                envious eyes, and slowly and surely drew their plans
+                against us." — H. G. Wells (1898), The War of the Worlds</p>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Thanks for reading! </p><br>
+        <a href="https://freeinvaders.org/" target="_blank">Play Space Invaders</a>
+        | <a href="https://www.ponggame.org/" target="_blank">Play Pong</a>
+        | <a href="https://tetris.com/play-tetris" target="_blank">Play Tetris</a>
+        | <a href="https://freepacman.org/" target="_blank">Play Pacman</a></p>
+        </p>
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Play Again</button>
+    </footer>
 
 </body>
 
