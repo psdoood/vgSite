@@ -18,14 +18,16 @@
 
     <!-- Landing Page -->
     <section class="video-landing">
-        <video id="background-video" autoplay loop muted>
-            <source src="videos/pong.mp4" type="video/mp4">
-        </video>
+        <div class="video-wrapper">
+            <video id="background-video" autoplay loop muted>
+                <source src="videos/pong.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="video-text">
-            <h1>Video Games & Media Convergences</h1>
+            <h1 class="arcade-title">VIDEO GAMES<br> &<br>MEDIA CONVERGENCES</h1>
             <p>From simple beginnings to global industry,
                 explore video games impact on modern media</p>
-            <button onclick="document.querySelector('.timeline').scrollIntoView({ behavior: 'smooth' });">Press Start</button>
+            <button onclick="document.querySelector('.timeline').scrollIntoView({ behavior: 'smooth' });">Play</button>
         </div>
     </section>
 
