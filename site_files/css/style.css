@@ -1,5 +1,11 @@
 :root {
     --background: black;
+    --main-col: #f7a200;
+    --secondary-col: red;
+    --text-col: whitesmoke;
+    --button-text-col: black;
+    --button-hov-col: #ffcc00;
+    --timeline-col: #222;
 }
 
 * {
@@ -28,12 +34,17 @@ section {
     padding: 20px;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+}
+
 button {
-    background-color: #f7a200;
-    border: 4px solid red; 
-    color: black;
+    background-color: var(--main-col);
+    border: 4px solid var(--secondary-col); 
+    color: var(--button-text-col);
     padding: 15px 30px;
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Press Start 2P", sans-serif;
     letter-spacing: 5px;
     cursor: pointer;
@@ -43,9 +54,9 @@ button {
 
 button:hover {
     transform: scale(1.1); 
+    font-size: 26px;
     box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
-    background-color: #ffcc00; 
-    color: black;
+    background-color: var(--button-hov-col); 
 }
 
 /*Video/Landing page Section */
@@ -72,17 +83,24 @@ button:hover {
 .video-text {
     position: absolute;
     top: 50%;
-    left:50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .video-text p {
     font-size: 12px;
-    color: whitesmoke;
+    color: var(--text-col);
+}
+
+.video-text button {
+    margin: 60px;
 }
 
 .arcade-title {
     font-size: 32px;
-    color: #f7a200;
+    color: var(--main-col);
     letter-spacing: 12px;
     text-shadow: red 3px 5px, #FC0 1px 0 6px;
 }
@@ -90,14 +108,61 @@ button:hover {
 /*Timeline Section*/
 .timeline{
     position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
-    background-color: red;
+    width: 4px;
+    background-color: var(--secondary-col);
     top: 0;
     bottom: 0;
     left: 50%;
+}
+
+.tl-left, .tl-right {
+    max-width: 900px;
+    width: 50%;
+    padding: 10px 20px;
+}
+
+.tl-left {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.tl-right {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.tl-content {
+    background-color: var(--timeline-col);
+    border: 2px dotted var(--secondary-col);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 900px){
+    .tl-left {
+        text-align: left;
+        align-self: flex-start;
+    }
+    .tl-left, .tl-right {
+        width: 100%;
+    }
+
+    .timeline {
+        margin-left: ;
+    }
+
+    .timeline::after {
+        left: 0; /* Position the timeline line to the left */
+    }
 }
