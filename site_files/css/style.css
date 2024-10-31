@@ -2,10 +2,12 @@
     --background: black;
     --main-col: #f7a200;
     --secondary-col: red;
-    --text-col: whitesmoke;
+    --text-col: white;
     --button-text-col: black;
     --button-hov-col: #ffcc00;
     --timeline-col: #222;
+    --link-background: #e0e0e0;
+    --link-clicked-background: #979393;
 }
 
 * {
@@ -21,23 +23,30 @@ html, body {
 }
 
 a {
-    color: var(--text-col);
+    color: var(--timeline-col);
     text-decoration: none;
     font-size: 14px;
-    
+    padding: 10px 20px;
+    background-color: var(--link-background);
+    border-radius: 8px;
+    transition: all 0.2s ease;
 }
 
 a:hover {
     color: var(--secondary-col);
+    font-size: 14px;
+    text-decoration: underline;
 }
 
 a:active {
-    color: var(--main-col);
+    background-color: var(--link-clicked-background);
+    color: var(--button-hov-col);
 }
 
 img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 section {
@@ -73,6 +82,13 @@ button {
 }
 
 button:hover {
+    transform: scale(1.1); 
+    font-size: 26px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
+    background-color: var(--button-hov-col); 
+}
+
+button:active {
     transform: scale(1.1); 
     font-size: 26px;
     box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
