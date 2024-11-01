@@ -142,6 +142,7 @@ button:active {
 }
 
 /*Timeline Section*/
+
 .timeline{
     position: relative;
     max-width: 900px;
@@ -166,6 +167,7 @@ button:active {
     max-width: 900px;
     width: 50%;
     padding: 10px 20px;
+    margin-top: 25px;
 }
 
 .tl-left {
@@ -182,7 +184,7 @@ button:active {
     background-color: var(--timeline-col);
     border: 2px dotted var(--secondary-col);
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .tl-content img{
@@ -203,6 +205,59 @@ button:active {
     }
 
     .timeline::after {
-        left: 0; /* Position the timeline line to the left */
+        left: 0;
+    }
+}
+
+/* Why Section */
+
+.why-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.why-grid {
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    row-gap: 40px;
+    column-gap: 40px;
+    max-width: 840px;
+}
+
+.why-item-left, .why-item-right {
+    background-color: var(--timeline-col);
+    border: 2px dotted var(--secondary-col);
+    border-radius: 8px;
+    padding: 30px;
+    
+    width: 100%
+}
+.why-item-left {
+    grid-row: span 2;
+    text-align: left;
+}
+
+.why-item-right {
+    text-align: right;
+}
+
+.why-item-left img, .why-item-right img {
+    margin-top: 20px;
+}
+
+
+/*NEEDS WORK!*/
+@media screen and (max-width: 900px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-item-left, .why-item-right {
+        padding: 20px;
+        text-align: center;
     }
 }
