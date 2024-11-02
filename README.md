@@ -26,3 +26,9 @@
     - CC BY-SA 4.0
 - Arcade image 
     - https://commons.wikimedia.org/wiki/File:ArcadeGames.jpg
+- dualshock image 
+    - https://freerangestock.com/photos/106214/two-people-playing-a-video-game-in-front-of-a-tv.html
+- War of the Worlds 
+    - https://commons.wikimedia.org/wiki/File:The_War_of_the_Worlds_by_Henrique_Alvim_Corr%C3%AAa,_original_graphic_15.jpg
+- WOTWs star
+    - https://commons.wikimedia.org/wiki/File:The_War_of_the_Worlds_by_Henrique_Alvim_Corr%C3%AAa,_orginal_graphic_03.jpg
