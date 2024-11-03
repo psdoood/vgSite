@@ -3,7 +3,7 @@
     --main-col: #f7a200;
     --secondary-col: red;
     --text-col: white;
-    --button-text-col: black;
+    --button-text-col: rgb(51, 42, 42);
     --button-hov-col: #ffcc00;
     --timeline-col: #222;
     --link-background: #e0e0e0;
@@ -284,8 +284,13 @@ header {
     text-align: right;
 }
 
+.l {
+    text-align: left;
+}
+
 .item-top {
     grid-column: span 2;
+    text-align: left;
 }
 
 .item-left img, .item-right img {
@@ -295,6 +300,7 @@ header {
 .quote {
     font-style: italic;
     padding: 10px;
+    padding: 30px;
 }
 
 
