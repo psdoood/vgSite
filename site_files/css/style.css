@@ -50,6 +50,10 @@ img {
     border-radius: 8px;
 }
 
+h1{
+    padding-top: 100px;
+}
+
 section {
     color: white;
     min-height: 100vh;
@@ -62,6 +66,11 @@ section {
 footer {
     display: flex;
     justify-content: center;
+}
+
+footer button {
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 p {
@@ -82,14 +91,7 @@ button {
     
 }
 
-button:hover {
-    transform: scale(1.1); 
-    font-size: 26px;
-    box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
-    background-color: var(--button-hov-col); 
-}
-
-button:active {
+button:hover, button:active {
     transform: scale(1.1); 
     font-size: 26px;
     box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
@@ -99,7 +101,7 @@ button:active {
 /*Header Section*/
 
 header h1{
-    padding-left: 20px;
+    padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 0;
@@ -113,11 +115,33 @@ header {
     bottom: 0; /*not sure why this is needed but thats what allowed it to be sticky */
     position: sticky;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: var(--header-background);
     border-bottom: 2px dotted var(--secondary-col);
     z-index: 100;
+    padding-right: 40px;
+}
+
+.header-button {
+    background-color: var(--header-background);
+    border: 0px; 
+    color: var(--text-col);
+    padding: 15px 30px;
+    font-size: 12px;
+    font-family: "Press Start 2P", sans-serif;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.header-button:hover, .header-button:active {
+    transform: scale(1.001); 
+    font-size: 16px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
+    background-color: var(--button-hov-col); 
+    color: var(--timeline-col)
 }
 
 .arcade-title-logo {
@@ -158,16 +182,16 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .video-text p {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--text-col);
 }
 
 .video-text button {
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .arcade-title {
@@ -297,10 +321,21 @@ header {
     margin-top: 20px;
 }
 
-.quote {
+.quote p{
     font-style: italic;
-    padding: 10px;
-    padding: 30px;
+    
+}
+
+.classics {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.classics a{
+    width: 70%;
+    font-size: 18px;
 }
 
 
@@ -316,4 +351,3 @@ header {
         text-align: center;
     }
 }
-
