@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <h1 class="arcade-title-logo">VG<br>MC</h1>
+        <button class="header-button arcade-title-logo" onclick="document.querySelector('.video-landing').scrollIntoView({ behavior: 'smooth' });">VG<br>MC</button>
         <button class="header-button" onclick="document.querySelector('.tl-section').scrollIntoView({ behavior: 'smooth' });">Timeline</button>
         <button class="header-button" onclick="document.querySelector('.why-section').scrollIntoView({ behavior: 'smooth' });">Why</button>
         <button class="header-button" onclick="document.querySelector('.mc-section').scrollIntoView({ behavior: 'smooth' });">Media Convergence</button>
@@ -217,11 +217,11 @@
                 <a href="https://freepacman.org/" target="_blank">Play Pacman</a>
             </div>
         </div>
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Play Again</button>
     </section>
 
     <footer>
     
-        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Play Again</button>
     </footer>
 
 </body>

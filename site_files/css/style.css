@@ -31,17 +31,31 @@ a {
     background-color: var(--link-background);
     border-radius: 8px;
     transition: all 0.2s ease;
+    position: relative;
 }
 
 a:hover {
     color: var(--secondary-col);
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: underline;
 }
 
 a:active {
     background-color: var(--link-clicked-background);
     color: var(--button-hov-col);
+}
+
+a:hover::after {
+    content: "External Link";
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    background-color: var(--main-col);
+    color: var(--timeline-col);
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-size: 8px;
+    visibility: visible;
 }
 
 img {
@@ -51,7 +65,7 @@ img {
 }
 
 h1{
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 section {
@@ -88,7 +102,7 @@ button {
     letter-spacing: 5px;
     cursor: pointer;
     transition: all 0.2s ease;
-    
+    margin-top: 10px;
 }
 
 button:hover, button:active {
@@ -96,6 +110,7 @@ button:hover, button:active {
     font-size: 26px;
     box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
     background-color: var(--button-hov-col); 
+    color: var(--background)
 }
 
 /*Header Section*/
@@ -141,7 +156,7 @@ header {
     font-size: 16px;
     box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
     background-color: var(--button-hov-col); 
-    color: var(--timeline-col)
+    color: var(--timeline-col);
 }
 
 .arcade-title-logo {
