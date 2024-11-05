@@ -139,7 +139,7 @@ header {
     padding-right: 40px;
 }
 
-.header-button {
+.header-button, .header-button-logo {
     background-color: var(--header-background);
     border: 0px; 
     color: var(--text-col);
@@ -151,7 +151,7 @@ header {
     transition: all 0.2s ease;
 }
 
-.header-button:hover, .header-button:active {
+.header-button:hover, .header-button:active, .header-button-logo:hover, .header-button-logo:active {
     transform: scale(1.001); 
     font-size: 16px;
     box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
@@ -165,7 +165,7 @@ header {
     letter-spacing: 8px;
     text-shadow: var(--main-col) 1px 2px, var(--main-col) 1px 0 6px;
     line-height: 18px;
-    bor
+    
 }
 
 /*Video/Landing page Section */
@@ -267,26 +267,6 @@ header {
     margin-top: 20px;
 }
 
-@media screen and (max-width: 900px){
-    .tl-left {
-        text-align: left;
-        align-self: flex-start;
-    }
-    .tl-left, .tl-right {
-        width: 100%;
-    }
-
-    .timeline {
-        margin-left: ;
-    }
-
-    .timeline::after {
-        left: 0;
-    }
-}
-
-/* Grid stuff */
-
 .grid-section {
     display: flex;
     flex-direction: column;
@@ -357,12 +337,89 @@ header {
 
 /*NEEDS WORK!*/
 @media screen and (max-width: 900px) {
+    
+    .header-button {
+        width: 18px; 
+        height: 20px;
+        margin: 20px 30px;
+        font-size: 0; 
+        border-radius: 100%; 
+        background-color: var(--text-col);
+        opacity: 40%;
+        padding-left: 0;
+    }
+    
+    .header-button:hover, .header-button:active {
+        font-size: 0;
+        box-shadow: 0px 0px 15px rgba(255, 0, 0, 1), 0px 0px 30px rgba(255, 0, 0, 0.6);
+        background-color: var(--button-hov-col); 
+        color: var(--timeline-col);
+        opacity: 100%;
+    }
+    
+    .arcade-title-logo {
+        font-size: 12px;
+        color: var(--secondary-col);
+        letter-spacing: 8px;
+        text-shadow: var(--main-col) 1px 2px, var(--main-col) 1px 0 6px;
+        line-height: 18px;
+    }
+
+
+    .arcade-title {
+        font-size: 18px;
+        color: var(--main-col);
+        letter-spacing: 4x;
+        text-shadow: red 3px 5px, #FC0 1px 0 6px;
+        line-height: 45px;
+    }
+
+    .video-text p {
+        font-size: 12px;
+        color: var(--text-col);
+    }
+
+    .tl-left {
+        text-align: left;
+        align-self: flex-start;
+    }
+    .tl-left, .tl-right {
+        width: 100%;
+    }
+
+    .timeline {
+        margin-left: ;
+    }
+
+    .timeline::after {
+        left: 0;
+    }
+
     .grid {
+        padding: 50px 20px;
+        display: grid;
         grid-template-columns: 1fr;
+        width: 100%;
+        row-gap: 40px;
+        column-gap: 40px;
+        max-width: 840px;
+        border: none;
+        border-left: 4px solid var(--secondary-col);
+        
     }
 
     .item-left, .item-right {
         padding: 20px;
-        text-align: center;
+        text-align: left;
+    }
+
+    .item-left {
+        grid-row: span 1;
+        text-align: left;
+    }
+    
+    .item-top {
+        grid-column: span 1;
+        text-align: left;
     }
 }
