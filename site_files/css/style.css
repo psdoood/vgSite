@@ -23,7 +23,7 @@ html, body {
     font-family: "Press Start 2P", sans-serif;
 }
 
-a {
+.normal-link {
     color: var(--timeline-col);
     text-decoration: none;
     font-size: 14px;
@@ -34,18 +34,18 @@ a {
     position: relative;
 }
 
-a:hover {
+.normal-link:hover {
     color: var(--secondary-col);
     font-size: 16px;
     text-decoration: underline;
 }
 
-a:active {
+.normal-link:active {
     background-color: var(--link-clicked-background);
     color: var(--button-hov-col);
 }
 
-a:hover::after {
+.normal-link:hover::after {
     content: "External Link";
     position: absolute;
     bottom: 110%;
@@ -79,12 +79,37 @@ section {
 
 footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-background);
+    border-top: 2px dotted var(--secondary-col);
+    margin-top: 20px;
+    color: var(--text-col);
 }
 
-footer button {
-    margin-top: 20px;
-    margin-bottom: 50px;
+footer p {
+    font-family: "Press Start 2P", sans-serif;
+    margin-bottom: 10px;
+}
+
+.source-link {
+    font-size: 12px;
+    color: var(--text-col);
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.source-link:hover {
+    text-decoration: underline;
+}
+
+.sources {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    line-height: 6px;
+    margin-bottom: 20px;
+    margin-top:10px;
 }
 
 p {
@@ -102,7 +127,7 @@ button {
     letter-spacing: 5px;
     cursor: pointer;
     transition: all 0.2s ease;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 button:hover, button:active {
@@ -123,7 +148,7 @@ header h1{
     margin-bottom: 0;
 }
 
-header {
+header{
     left: 0;
     right: 100vw;
     top: 0;
@@ -283,7 +308,7 @@ header {
     column-gap: 40px;
     max-width: 840px;
     border: 4px solid var(--secondary-col);
-    
+    margin-bottom: 40px;
 }
 
 .item-left, .item-right , .item-top, .item-bottom {
@@ -333,10 +358,10 @@ header {
     font-size: 18px;
 }
 
-
-
-/*NEEDS WORK!*/
 @media screen and (max-width: 950px) {
+    img {
+        max-width: 100%;
+    }
     
     .header-button {
         width: 18px; 
@@ -379,9 +404,9 @@ header {
         color: var(--text-col);
     }
 
-    .tl-left {
-        text-align: left;
-        align-self: flex-start;
+    .tl-left, .tl-right {
+        text-align: center;
+    
     }
     .tl-left, .tl-right {
         width: 100%;
@@ -408,18 +433,24 @@ header {
         
     }
 
-    .item-left, .item-right {
+    .item-left, .item-right, .item-bottom, .item-top{
         padding: 20px;
-        text-align: left;
+        text-align: center;
     }
 
     .item-left {
         grid-row: span 1;
-        text-align: left;
     }
     
     .item-top {
         grid-column: span 1;
-        text-align: left;
+    }
+
+    .img-item img {
+        max-width: 200px;
+    }
+
+    .sources {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
