@@ -23,6 +23,8 @@ html, body {
     font-family: "Press Start 2P", sans-serif;
 }
 
+/*Link Section*/
+
 .normal-link {
     color: var(--timeline-col);
     text-decoration: none;
@@ -77,6 +79,8 @@ section {
     text-align: center;
     padding: 20px;
 }
+
+/*Footer Section*/
 
 footer {
     display: flex;
@@ -293,6 +297,8 @@ header{
     margin-top: 20px;
 }
 
+/*Grid Section*/
+
 .grid-section {
     display: flex;
     flex-direction: column;
@@ -358,6 +364,8 @@ header{
     width: 70%;
     font-size: 18px;
 }
+
+/*Smaller Screen Section*/
 
 @media screen and (max-width: 950px) {
     img {
